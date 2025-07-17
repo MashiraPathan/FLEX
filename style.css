@@ -542,6 +542,11 @@ a span {
   color: #fff;
 }
 
+.back-to-top a:hover {
+  background-color: #fff;
+  color: #111;
+}
+
 html {
   scroll-behavior: smooth;
 }
