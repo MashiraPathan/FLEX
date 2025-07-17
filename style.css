@@ -1,0 +1,597 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.row, .navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.row , nav{
+  padding: 10px 180px;
+}
+
+.our-info, .welcome {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+header {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  background: url("https://img.freepik.com/premium-photo/sunset-industrial-scene-with-oil-refinery-pump-factory-amid-creative-backdrop-concept-industrial-photography-sunset-scenes-oil-refinery-creative-backdrops-factory-aesthetics_918839-226439.jpg?w=1060") center / cover ;
+}
+
+h1 span, .nav-links a, .fa-moon, .fa-bars, button, .hero-section, .icon:hover i{
+  color: #fff;
+}
+
+.logo, .nav-links .default, .fa-magnifying-glass, .count, .nav-links a:hover, .icon i, .card i, .services, .testimonial h3 {
+  color: #ff9900;
+}
+
+.navigation {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.nav-links a {
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  padding: 5px 0;
+  margin: 0 10px;
+}
+
+.nav-links a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #ff9900;
+  transition: 0.5s;
+}
+
+.nav-links a:hover::before {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+.page {
+  position: relative;
+  
+}
+
+.blogs {
+  visibility: hidden;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+  padding-bottom: 10px;
+  background-color: #fff;
+  position: absolute;
+  top: 25px;
+  left: 10px;
+}
+
+.blogs a {
+  width: 100px;
+  color:#111;
+}
+
+.page:hover .blogs {
+  visibility: visible;
+} 
+
+.nav-icons {
+  display: flex;
+}
+
+.nav-icons i {
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  line-height: 35px;
+  font-size: 18px;
+  border-radius: 4px;
+}
+
+.fa-bars {
+  background-color: #ff9900;
+  display: none !important;
+} 
+
+.fa-magnifying-glass {
+  background-color: #fff;
+}
+
+.hero-section {
+  width: 50%;
+}
+
+.hero-section p{
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.hero-section h2{
+  font-weight: bold;
+  font-size: 3.5rem;
+  margin: 25px 0;
+}
+
+.hero-section button {
+  margin-top: 45px;
+}
+
+button {
+  background-color: #ff9900;
+  padding:10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.row.counter {
+  padding: 40px 50px;
+  gap: 50px;
+  background-color: #fff;
+  border-radius: 7px;
+  position: absolute;
+  bottom: -10%;
+  right: 10%;
+}
+
+p span {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #111;
+}
+
+.row.our-info {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.content {
+  width: 80%;
+  text-align: center;
+}
+
+.content p {
+  color: gray;
+  margin: 10px 0;
+}
+
+.content h2 {
+  font-size: 2rem;
+}
+
+.image img {
+  width: 60vw;
+  margin-top: 20px;
+  border-radius: 4px;
+}
+
+.animate{
+  position: relative;
+}
+
+.icon i {
+  font-size: 1rem;
+}
+
+.icon:hover {
+  background-color: #ff9900;
+}
+
+.icon, .ring1, .ring2, .ring3{
+  border-radius: 70px;
+}
+
+.icon{
+  height: 3vw;
+  width: 3vw;   
+  background-color: white;
+  text-align: center;
+  line-height: 3vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: 1s;
+  z-index: 4;
+}
+
+.ring1{
+  height: 4vw;
+  width: 4vw;
+  position: absolute;
+  top:48.5%;
+  left:49.2%;
+  z-index: 1;
+  background-color: rgba(256,256,256,.5);
+}
+
+.ring2{
+  height: 4vw;
+  width: 4vw;
+  background-color: rgba(256,256,256,.2);
+  animation: pulse 2s infinite;
+}
+
+.ring3{
+  height: 4vw;
+  width: 4vw;
+  background-color: rgba(256,256,256,.05);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse{
+  0%{
+    transform: scale(1);
+    opacity: .5;
+  }
+  100%{
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+
+.icon:hover{
+  transform: scale(1.1);
+}
+
+.welcome {
+  flex-wrap: wrap;
+  background-color: #e9e9e9;
+  justify-content: center;
+  gap: 30px;
+}
+
+.content.align {
+  text-align: left;
+  width: fit-content;
+}
+
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.images img {
+  height: 25vw;
+  width: 20vw;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.cards {
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 0;
+}
+
+.card {
+  background-color: #e9e9e9;
+  padding: 50px;
+  border-radius: 4px;
+  transition: 0.5s;
+}
+
+.card:hover {
+  background-color: #ff9900;
+}
+
+.card:hover i, .card:hover p {
+  color: #fff;
+}
+
+.card i {
+  font-size: 1.7rem;
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin: 20px 0;
+}
+
+.card p {
+  color: gray;
+}
+
+.gallery {
+  background-color: #f1f3f8;
+}
+
+.card-image {
+  overflow: hidden;
+  position: relative;
+}
+
+.card-image img {
+  height: 250px;
+  width: 370px;
+}
+
+.card-image::before {
+  content: '';
+  height: 0;
+  width: 0;
+  background-color: rgba(21, 24, 24, 0.3);
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transition: .7s;
+}
+
+.card-image:hover::before {
+  height: 250px;
+  width: 370px;
+  top: 0;
+  left: 0;
+}
+
+.card-text {
+  color: #fff;
+  position: absolute;
+  top: 40%;
+  left: 35%;
+  transform: scale(0);
+  transition: none;
+}
+
+.card-image:hover .card-text {
+  transform: scale(1);
+  transition: 1.5s;
+}
+
+.offer-image img {
+  width: 40vw;
+  border-radius: 4px;
+}
+
+.services {
+  border: 1px solid #ff9900;
+  background-color: transparent;
+}
+
+.welcome.bg-color {
+  background-color: transparent;
+}
+
+.subscribe {
+  flex-wrap: wrap;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://www.zeal3dprinting.com.au/wp-content/uploads/2023/03/Fabrication-services-1400x501.jpg');
+  height: 40vh;
+}
+
+.subscribe input {
+  height: 5vh;
+  width: 28vw;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  padding: 0 20px;
+
+}
+
+.subscribe .align {
+  color: #fff;
+}
+
+.row.testimonials {
+  width: 100%;
+  padding: 0;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+.testimonial {
+  height: 270px;
+  width: 320px;
+}
+
+.testimonial img {
+  height: 10vh;
+  width: 10vh;
+  object-fit: cover; 
+  border-radius: 4px;
+}
+.testimonial p {
+  margin: 15px 0;
+}
+
+h3 span {
+  font-size: 0.9rem;
+  font-weight: 100;
+  color: gray;
+}
+
+footer {
+  padding-top: 70px;
+  padding-bottom: 20px;
+  background-color: #111;
+  color: #fff;
+}
+
+.footer-container {
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.about {
+  width: 250px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.footer-column ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column ul li {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color: #ff9900;
+}
+
+.about p {
+  color: #ccc;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.social-icons a {
+  display: inline-block;
+  background-color: #ff9900;
+  color: #fff;
+  padding: 10px;
+  margin-right: 5px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+a span {
+  font-weight: bold;
+  color: #fff;
+}
+
+.recent-posts .post {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.recent-posts img {
+  margin-right: 10px;
+  width: 80px;
+  height: 60px;
+  object-fit: cover;
+}
+
+.recent-posts p {
+  color: #ccc;
+  margin: 0;
+  font-size: 14px;
+}
+
+.recent-posts span {
+  font-size: 12px;
+  color: #888;
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  margin-top: 40px;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-bottom p {
+  color: #ccc;
+  font-size: 13px;
+}
+
+.footer-bottom a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 13px;
+}
+
+.back-to-top a {
+  position: fixed;
+  bottom: 5%;
+  right: 3%;
+  background-color: #ff9900;
+  padding: 10px 12px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+@media (max-width: 1024px) {
+  html {
+    font-size: 0.9rem;
+  }
+
+  .row, nav {
+    padding: 10px 10px 10px 120px;
+  }
+
+  .counter {
+    display: none;
+  }
+}
+
+@media (max-width: 992px) {
+  .row, nav {
+    padding: 10px 10px 10px 50px;
+  }
+
+  .fa-bars {
+    display: block !important;
+  }
+
+  .nav-links,
+  .fa-magnifying-glass {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 0.7rem;
+  }
+
+  .row, nav {
+    padding: 10px;
+  }
+
+  button {
+    padding: 8px 5px;
+  }
+}
